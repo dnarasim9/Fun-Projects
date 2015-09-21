@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initialscale=1">
+     
+    <title>The Majestic Llama</title>
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">    
+
+    <style>
+
+      body {
+        font-family: Verdana;
+      }
+
+      .navbar-brand {
+        font-size: 1.8em;
+      }
+
+      #topContainer {
+        background-image: url("https://upload.wikimedia.org/wikipedia/commons/b/b9/Llama_lying_down.jpg");
+        height: 400px;
+        width: 100%; 
+        background-size:cover;
+      }
+
+      #topRow {
+        margin-top: 100px;
+        text-align: center;
+        color: lightgrey;
+      }
+
+      #topRow h1 {
+        font-size: 300%;
+      }
+
+      #emailSignup {
+        margin-top: 50px;
+      }
+
+      .bold {
+        font-weight: bold;
+      }
+
+      .welcome {
+        margin-top: 50px;
+        color: black;
+      }
+        
+      .subheading {
+        color: black;
+      }      
+
+      .center {
+        text-align: center;
+      }
+
+      .title {
+        margin-top: 50px;
+        font-size: 300%;
+      }
+        
+      #middle {
+        background-color: lightcyan;
+        padding-top: 50px;
+        width: 100%;
+      }
+
+      #footer {
+        background-color: lightgreen;
+        padding-top: 50px;
+        width: 100%;        
+      }
+
+      .marginBottom {
+        margin-bottom: 30px;
+      }
+
+      .appstoreImage {
+        width: 250px;
+      }      
+
+    </style>
+ </head>
+ 
+ <body data-spy="scroll" data-target=".navbar-collapse">
+
+
+    <div class="navbar navbar-inverse navbar-fixed-top">
+
+      <div class="container">
+
+        <div class="navbar-header">
+
+          <a href="" class="navbar-brand">The Majestic Llama</a>
+
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+
+            </button>
+
+        </div>
+
+ 
+        <div class="collapse navbar-collapse">
+
+          <ul class="nav navbar-nav">
+
+            <li class="active"><a href="#home">Home</a></li>
+
+            <li><a href="#about">About</a></li>
+
+            <li><a href="#funfacts">Fun Facts</a></li>
+            
+          </ul>
+
+          <form class="navbar-form navbar-right">
+              <div class="form-group">
+                <input type="email" placeholder="Email" class="form-control" />
+              </div>
+
+              <div class="form-group">
+                <input type="password" placeholder="Password" class="form-control" />
+              </div>
+
+              <button type="submit" class="btn btn-success">Log In</button>
+          </form>
+
+        </div>
+
+      </div>
+
+    </div>
+ 
+
+  <div class="container contentContainer" id="topContainer">   
+
+    <div class="row" id="home">
+        
+        <div class="col-md-6 col-md-offset-3" id="topRow">
+            
+        <h1 class="welcome">Welcome to the Llama home</h1>
+        <p class="bold subheading">I am the most enjoyable large animal that you can own</p>
+        <br />
+        <p class="bold subheading">Sign Up below to know everything about me</p>
+        <p class="bold subheading">Sounds Interesting? Join my mailing list. Its easy!</p>
+
+        <form class="marginTop">            
+          <div class="input-group">
+
+            <span class="input-group-addon">Email</span>
+            <input type="email" class="form-control" placeholder="Your email" />
+            
+          </div>
+            <input type="submit" value="SignUp" class="btn btn-success btn-lg marginTop" />
+        </form>
+            
+        </div>
+
+    </div>
+
+  </div>
+
+  <div class="container contentContainer" id="middle">
+    
+    <div class="row" class="center" id="about">
+      
+      <h1 class="center title">Why am I awesome</h1>
+      <p class="lead center">Below are 3 of my Unique Selling Propositions
+      <br />
+      <br />
+
+    </div>
+
+    <div class="row marginBottom">
+        
+      <div class="col-md-4">
+
+      <h2><span class="glyphicon glyphicon-pencil"></span> A Pack Animal </h2>  
+      <p>I am your friendly companion in mountainous areas. I carry about 100 pounds for you. With my two toed foot, I am agile and sure-footed. The soft pad on the bottom of my foot results in a low impact on the environment. I am easily trained and rather inexpensive to keep </p>
+      <button class="btn btn-success">Like</button>
+
+      </div>
+
+      <div class="col-md-4">
+      
+      <h2><span class="glyphicon glyphicon-pencil"></span> A Guard Animal </h2>  
+      <p>I can be used as your guard animal for protecting herds of sheep, goats or geese. Using me as a guard has eliminated the losses to predators for many producers. The value of the livestock saved each year more than exceeds my purchase cost and annual maintenance cost  </p>
+      <button class="btn btn-success">Like</button>
+
+      </div>
+
+      <div class="col-md-4">
+      
+      <h2><span class="glyphicon glyphicon-pencil"></span> Exquisite Fiber </h2>  
+      <p>Fiber is my prized product. My lanolin-free wool is fine, soft, and warm - greatly appreciated by spinners, knitters, and weavers. Many commercial processors specialize in cleaning, carding, spinning and can turn this luxurious raw fiber into rovings and yarns </p>
+      <button class="btn btn-success">Like</button>
+
+      </div>      
+
+    </div>
+
+  </div>
+
+
+<div class="container contentContainer" id="footer">
+
+  <div class="row" id="funfacts">
+
+    <h1 class="center title">Now, a few Fun Facts!</h1>
+    <br />
+    <br />  
+    <p class="lead">1. I am a South American relative of the camel, though I do not have a hump </p>
+    <p class="lead">2. My fibres are fireproof </p>
+    <p class="lead">3. A male llama is called as sire, the female is named as dam and cria is the name given to baby llama </p>
+    <p class="lead">4. I come in various colours - white, brown, grey, black and beige </p>
+    <p class="lead">5. Just like camels, I can survive for weeks without water because I collect moisture from the food that I eat </p>
+    <p class="lead">6. Most of the animals bite when agitated, but I spit. Yes, if anyone disturbs me, then I spit on them </p>
+    <p class="lead">7. Finally, my manure is almost odourless </p>
+    <br />
+    <h4 class="center bold">Interested to know more? Download my fun facts app on the App Store</h1>
+    <br />
+    <br />
+    <p class="center"><img src="http://www.atpworldtour.com/~/media/images/footer-pages/apps/apple-appstore.png?h=80&la=en&w=270&hash=4DB9DB8A673B2051F9880A92D2501747F1E8BA0E&hash=4DB9DB8A673B2051F9880A92D2501747F1E8BA0E" class="appstoreImage" >
+
+  </div>
+
+</div>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>    
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+    <script type="text/javascript">
+
+      $(".contentContainer").css("min-height",$(window).height());
+
+    </script>
+
+</body>
+</html>
