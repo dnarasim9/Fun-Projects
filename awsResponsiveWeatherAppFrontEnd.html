@@ -88,4 +88,33 @@
 
     $(document).ready(function () {
 
+  
+            validator=$('#myform').validate({
+                rules: {
+                    address: {
+                       required: true                       
+                    },
+    
+                    city: {
+                        required: true                       
+                    },
 
+                    state: {
+                        required: true
+                    }
+                },
+
+
+                messages: {
+                    address: {
+                        required:"Please enter the street address"
+                    },
+
+                    city: {
+                        required:"Please enter the city"
+                    },
+
+                    state: {
+                        required: "Please select a state"
+                    }
+ 
