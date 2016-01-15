@@ -118,3 +118,33 @@
                         required: "Please select a state"
                     }
  
+                }
+            });
+        });
+
+
+        
+
+        $(function() {
+
+
+            $("#search").click(function() {                
+
+                var address = $("#address").val();
+                var city = $("#city").val();
+                var state = $("#state").val();
+                var reg=/[^\s]/;
+
+                if(!$("#myform").valid())
+                {
+
+                    return false;
+                }
+
+            else
+                {
+                    console.log("Ajax call");
+                    $.ajax({
+                                    type: 'GET',
+                                    url: 'index.php',
+                                    dataType: 'json',
