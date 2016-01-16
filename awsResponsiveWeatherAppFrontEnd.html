@@ -148,3 +148,33 @@
                                     type: 'GET',
                                     url: 'index.php',
                                     dataType: 'json',
+
+					data: {
+						street : $("#address").val(),
+						city : $("#city").val(),
+						state : $("#state").val(),
+						degree : $("input[name=degree]:checked").val()
+					},
+
+					success: function(output){
+						console.log("Success function");
+						console.log(output);
+
+                        $('#forecastResultsDiv').show();
+						$('#weatherTabs a[href="#rightNow"]').tab('show');
+
+						var rightNowIcon = "";
+						switch(output.currently.icon)
+						{
+                                    case 'clear-day': rightNowIcon="<img src='http://cs-server.usc.edu:45678/hw/hw8/images/clear.png' title='" + output.currently.summary + "' alt='"+ output.currently.summary +"' length='100' width='100'>"; break;
+                                    case 'clear-night': rightNowIcon="<img src='http://cs-server.usc.edu:45678/hw/hw8/images/clear_night.png' title='" + output.currently.summary + "' alt='"+ output.currently.summary +"' length='100' width='100'>"; break;
+                                    case 'rain': rightNowIcon="<img src='http://cs-server.usc.edu:45678/hw/hw8/images/rain.png' title='" + output.currently.summary + "' alt='"+ output.currently.summary +"' length='100' width='100'>"; break;
+                                    case 'snow': rightNowIcon="<img src='http://cs-server.usc.edu:45678/hw/hw8/images/snow.png' title='" + output.currently.summary + "' alt='"+ output.currently.summary +"' length='125' width='125'>"; break;
+                                    case 'sleet': rightNowIcon="<img src='http://cs-server.usc.edu:45678/hw/hw8/images/sleet.png' title='" + output.currently.summary + "' alt='"+ output.currently.summary +"' length='125' width='125'>"; break;
+                                    case 'wind': rightNowIcon="<img src='http://cs-server.usc.edu:45678/hw/hw8/images/wind.png' title='" + output.currently.summary + "' alt='"+ output.currently.summary +"' length='125' width='125'>"; break;
+                                    case 'fog':     rightNowIcon="<img src='http://cs-server.usc.edu:45678/hw/hw8/images/fog.png' title='" + output.currently.summary + "' alt='"+ output.currently.summary +"' length='125' width='125'>"; break;
+                                    case 'cloudy': rightNowIcon="<img src='http://cs-server.usc.edu:45678/hw/hw8/images/cloudy.png' title='" + output.currently.summary + "' alt='"+ output.currently.summary +"' length='125' width='125'>"; break;
+                                    case 'partly-cloudy-day': rightNowIcon="<img src='http://cs-server.usc.edu:45678/hw/hw8/images/cloud_day.png' title='" + output.currently.summary + "' alt='"+ output.currently.summary +"' length='125' width='125'>"; break;
+                                    case 'partly-cloudy-night':     rightNowIcon="<img src='http://cs-server.usc.edu:45678/hw/hw8/images/cloud_night.png' title='" + output.currently.summary + "' alt='"+ output.currently.summary +"' length='125' width='125'>"; break;
+                        }
+
