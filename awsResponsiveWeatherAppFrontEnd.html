@@ -178,7 +178,33 @@
                                     case 'partly-cloudy-night':     rightNowIcon="<img src='http://cs-server.usc.edu:45678/hw/hw8/images/cloud_night.png' title='" + output.currently.summary + "' alt='"+ output.currently.summary +"' length='125' width='125'>"; break;
                         }
 
-//Test comment
+						if($('input[name=degree]:checked').val() == "Fahrenheit") {
+						console.log($('input[name=degree]:checked').val());
 
-<hr>
+						var precipIntensityF = "";
+							if(output.currently.precipIntensity >= 0 && output.currently.precipIntensity < 0.002) precipIntensityF = "None";
+							else if(output.currently.precipIntensity >= 0.002 && output.currently.precipIntensity < 0.017) precipIntensityF = "Very Light";
+							else if(output.currently.precipIntensity >= 0.017 && output.currently.precipIntensity < 0.1) precipIntensityF = "Light";
+							else if(output.currently.precipIntensity >= 0.1 && output.currently.precipIntensity < 0.4) precipIntensityF = "Moderate";
+							else if(output.currently.precipIntensity >= 0.4) precipIntensityF = "Heavy";
 
+						var time = output.daily.data[0].sunriseTime;
+						var time1 = output.daily.data[0].sunsetTime;
+						console.log(time);
+
+
+
+$("#rightNowVisual").html(
+								'<div class="row" style="background: #F17D7E">' +
+								'<center>' +
+									'<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">' +
+										rightNowIcon +
+									'</div>' +
+									'<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">' +
+'<span style="color: white;"><b>' + output.currently.summary + ' in ' + $("#city").val() +', '+ $("#state").val() + '</b></span><br><span style="color: white; font-size: 50px;"><b>' + Math.round(output.currently.temperature) +'<span style="font-size: 15px; vertical-align: text-top;">&deg F</span></b></span><br><div id="fb-root"><span style="color: blue;">'+ 'L: ' + Math.round(output.daily.data[0].temperatureMin) + '&deg</span> | <span style="color: green"> H: '+ Math.round(output.daily.data[0].temperatureMax) + '&deg</span>&nbsp;&nbsp' + '<span><img src="http://cs-server.usc.edu:45678/hw/hw8/images/fb_icon.png"; length=40; width=40; id="fbTestBtn"></span><p id="msg"></p></div>' +'</div>'+
+
+									'</div>' +
+
+								'</center>' +
+								'<div>' +
+								'<div class="row">' +
