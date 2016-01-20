@@ -58,4 +58,34 @@ class demo implements ActionListener
  public void actionPerformed(ActionEvent ae)
  {
      if(ae.getSource()==jb2)
+      {
+     	if(directoryDialog == null)
+	{
+	          	directoryDialog = new JDirectoryDialog(null);
+	}
+	if(directoryDialog.showDirectoryDialog())
+	{
+		File destFile = directoryDialog.getSelectedFolder();
+		path =destFile.getAbsolutePath();
+		jt1.setText(path);
+	}
+     }
+     
+     else if(ae.getSource()==jb3)
+     {
+     	JFileChooser tFileChooser=new JFileChooser();
+	tFileChooser.setFileSelectionMode(JFileChooser.FILES_ONLY);
+	int tResult=tFileChooser.showOpenDialog(null);
+			
+	if(tResult==JFileChooser.APPROVE_OPTION)
+	{
+		path1=tFileChooser.getSelectedFile().toString();
+		jt2.setText(path1);
+	}
+      }
+ 
+ else
+ {
+  	if(path==null)
+  	{	JOptionPane.showMessageDialog(null,"Please select database","database not selected",1);
  
