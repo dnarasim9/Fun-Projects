@@ -88,4 +88,34 @@ class demo implements ActionListener
  {
   	if(path==null)
   	{	JOptionPane.showMessageDialog(null,"Please select database","database not selected",1);
- 
+  	}
+  	if(path1==null)
+  	{	JOptionPane.showMessageDialog(null,"Please select input file","input not selected",1);
+  	}
+  	TestFaceRecognition t=new TestFaceRecognition(path,path1);
+  }
+
+}
+
+}
+class sow
+{
+	public static void main(String a[])
+	{
+		demo d= new demo();
+	}
+}
+
+
+
+/*----- Module2 : Test Face Recognition------*/
+
+import java.lang.*;
+import java.io.*;
+import javax.swing.*;
+
+public class TestFaceRecognition 
+{
+	String dir = null;
+        	String file =null;
+
