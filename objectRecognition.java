@@ -148,4 +148,34 @@ JFrame f=new JFrame(result);
        		}
          
         	         } 
-        	         
+         
+        	   catch (Exception e) { e.printStackTrace(); }
+   	 }
+ }
+
+
+/*-----Module 3: Eigen Face Creator-----*/
+
+import java.io.*;
+import java.util.*;
+import java.lang.*;
+import javax.swing.*;
+
+public class EigenFaceCreator 
+{
+private File root_dir;
+  	private static final int MAGIC_SETNR = 16;
+  	private FaceBundle[] b = null;
+  
+       /**
+       * Our threshold for accepting the matched image. Anything above this
+       * number is considered as not found in any of the face-spaces.
+       */
+  	public static double THRESHOLD = 4.0;
+public double DISTANCE = Double.MAX_VALUE;
+
+public int USE_CACHE = 1;
+
+      /*
+      * Match against the given file.
+     
