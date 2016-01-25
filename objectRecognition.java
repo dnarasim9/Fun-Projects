@@ -178,4 +178,33 @@ public int USE_CACHE = 1;
 
       /*
       * Match against the given file.
+      * @return  The Identifier of the image in the face-space. If image not
+      * found (based on THRESHOLD) null is returned.
+      */
+public String checkAgainst(String f) throws FileNotFoundException, IOException {
+String id = null;
+    	if (b != null) 
+{
+      		double small = Double.MAX_VALUE;
+int idx = -1;
+     		double[] img = readImage(f);
+
+      		for (int i = 0; i < b.length; i++) 
+{
+        			b[i].submitFace(img);
+     			if (small > b[i].distance() ) {
+          			small = b[i].distance();
+            			idx = i;
+        		}
+   	}
      
+DISTANCE = small;
+    	if (small < THRESHOLD)
+       	       id = b[idx].getID();
+    }
+    return id;
+  }
+  /**
+   * Construct the face-spaces from the given directory. There must be at least sixteen images in that directory and   
+   *each image must have the same dimensions. The face-space bundles are also cached in that directory for speeding    
+   * up further initialization.     
