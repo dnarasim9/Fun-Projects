@@ -238,4 +238,34 @@ if($('#weatherTabs li.active').text() == "Right Now") {
 										case 'cloudy': fbpicture='http://cs-server.usc.edu:45678/hw/hw8/images/cloudy.png'; break;
 										case 'partly-cloudy-day': fbpicture='http://cs-server.usc.edu:45678/hw/hw8/images/cloud_day.png'; break;
 										case 'partly-cloudy-night':	fbpicture='http://cs-server.usc.edu:45678/hw/hw8/images/cloud_night.png'; break;
+									}
+
+									var fbname = 'Current Weather in ' + $("#city").val() +', '+ $("#state").val();
+									var fbdesc = output.currently.summary + ', ' + Math.round(output.currently.temperature) + '\xB0F';
+
+									console.log("fbpicture - " + fbpicture + " fbname - " + fbname + " fbdesc - " + fbdesc);
+									FB.init({appId: "1705808262988350", status: true, cookie: true});
+									postToFeed(fbpicture, fbname, fbdesc);
+								});
+
+								$('#rightNowMap').html('<div id="basicMap"></div>');
+								createMap(output.latitude, output.longitude);
+								console.log($('#weatherTabs li.active').text());
+							}
+
+
+
+var next24HourVisual = '<div class="table-responsive"><table class="table table-striped" id="next24HourTableData"><tr style="background-color:#367DB5; text-align:center" id="next24HourTableHeaderRow"><th style="color: white;text-align:center">Time</th><th style="color: white;text-align:center">Summary</th><th style="color: white;text-align:center">Cloud Cover</th><th style="color: white;text-align:center">Temp (&degF)</th><th style="color: white;text-align:center">View Details</th></tr>';
+
+							for(var i = 1; i < 25; i++) {
+								console.log(i);
+
+								var icon24Hour = "";
+								switch(output.hourly.data[i].icon)
+								{
+									case 'clear-day': icon24Hour="<img src='http://cs-server.usc.edu:45678/hw/hw8/images/clear.png' title='" + output.hourly.data[i].summary + "' alt='"+ output.hourly.data[i].summary +"' length='30' width='30'>";	break;
+									case 'clear-night': icon24Hour="<img src='http://cs-server.usc.edu:45678/hw/hw8/images/clear_night.png' title='" + output.hourly.data[i].summary + "' alt='"+ output.hourly.data[i].summary +"' length='30' width='30'>"; break;
+									case 'rain': icon24Hour="<img src='http://cs-server.usc.edu:45678/hw/hw8/images/rain.png' title='" + output.hourly.data[i].summary + "' alt='"+ output.hourly.data[i].summary +"' length='30' width='30'>"; break;
+									case 'snow': icon24Hour="<img src='http://cs-server.usc.edu:45678/hw/hw8/images/snow.png' title='" + output.hourly.data[i].summary + "' alt='"+ output.hourly.data[i].summary +"' length='30' width='30'>"; break;
+									case 'sleet': icon24Hour="<img src='http://cs-server.usc.edu:45678/hw/hw8/images/sleet.png' title='" + output.hourly.data[i].summary + "' alt='"+ output.hourly.data[i].summary +"' length='30' width='30'>"; break;
 										
