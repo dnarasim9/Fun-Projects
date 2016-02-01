@@ -208,3 +208,34 @@ $("#rightNowVisual").html(
 								'</center>' +
 								'<div>' +
 								'<div class="row">' +
+									'<div class="table-responsive"><table class="table table-striped">'+
+										'<tr><td>Precipitation</td><td>' + precipIntensityF + '</td></tr>'+
+										'<tr style="background: #F1DDDD"><td>Chance of Rain</td><td>' + Math.round(output.currently.precipProbability * 100) + ' %</td></tr>'+
+										'<tr><td>Wind Speed</td><td>' + (output.currently.windSpeed).toFixed(2) + ' mph</td></tr>'+
+										'<tr style="background: #F1DDDD"><td>Dew Point</td><td>' + (output.currently.dewPoint).toFixed(2) + '&deg F</td></tr>'+
+										'<tr><td>Humidity</td><td>' + Math.round(output.currently.humidity * 100) + ' %</td></tr>'+
+										'<tr style="background: #F1DDDD"><td>Visibility</td><td>' + (output.currently.visibility).toFixed(2) + ' mi</td></tr>'+
+										'<tr><td>Sunrise</td><td>' + timeFormatter(output.daily.data[0].sunriseTime) + '</td></tr>'+
+										'<tr style="background: #F1DDDD"><td>Sunset</td><td>' + timeFormatter(output.daily.data[0].sunsetTime) + '</td></tr>'+
+									'</table></div>' +
+								'</div>'
+							);
+
+if($('#weatherTabs li.active').text() == "Right Now") {
+								$('#fbTestBtn').click(function(e){
+									console.log("fb button was clicked");
+
+									var fbpicture = "";
+									switch(output.currently.icon)
+									{
+										case 'clear-day': fbpicture='http://cs-server.usc.edu:45678/hw/hw8/images/clear.png'; break;
+										case 'clear-night': fbpicture='http://cs-server.usc.edu:45678/hw/hw8/images/clear_night.png'; break;
+										case 'rain': fbpicture='http://cs-server.usc.edu:45678/hw/hw8/images/rain.png'; break;
+										case 'snow': fbpicture='http://cs-server.usc.edu:45678/hw/hw8/images/snow.png'; break;
+										case 'sleet': fbpicture='http://cs-server.usc.edu:45678/hw/hw8/images/sleet.png'; break;
+										case 'wind': fbpicture='http://cs-server.usc.edu:45678/hw/hw8/images/wind.png'; break;
+										case 'fog':	fbpicture='http://cs-server.usc.edu:45678/hw/hw8/images/fog.png'; break;
+										case 'cloudy': fbpicture='http://cs-server.usc.edu:45678/hw/hw8/images/cloudy.png'; break;
+										case 'partly-cloudy-day': fbpicture='http://cs-server.usc.edu:45678/hw/hw8/images/cloud_day.png'; break;
+										case 'partly-cloudy-night':	fbpicture='http://cs-server.usc.edu:45678/hw/hw8/images/cloud_night.png'; break;
+										
