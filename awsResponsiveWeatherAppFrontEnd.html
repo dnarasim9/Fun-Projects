@@ -268,4 +268,34 @@ var next24HourVisual = '<div class="table-responsive"><table class="table table-
 									case 'rain': icon24Hour="<img src='http://cs-server.usc.edu:45678/hw/hw8/images/rain.png' title='" + output.hourly.data[i].summary + "' alt='"+ output.hourly.data[i].summary +"' length='30' width='30'>"; break;
 									case 'snow': icon24Hour="<img src='http://cs-server.usc.edu:45678/hw/hw8/images/snow.png' title='" + output.hourly.data[i].summary + "' alt='"+ output.hourly.data[i].summary +"' length='30' width='30'>"; break;
 									case 'sleet': icon24Hour="<img src='http://cs-server.usc.edu:45678/hw/hw8/images/sleet.png' title='" + output.hourly.data[i].summary + "' alt='"+ output.hourly.data[i].summary +"' length='30' width='30'>"; break;
-										
+									case 'wind': icon24Hour="<img src='http://cs-server.usc.edu:45678/hw/hw8/images/wind.png' title='" + output.hourly.data[i].summary + "' alt='"+ output.hourly.data[i].summary +"' length='30' width='30'>"; break;
+									case 'fog':	icon24Hour="<img src='http://cs-server.usc.edu:45678/hw/hw8/images/fog.png' title='" + output.hourly.data[i].summary + "' alt='"+ output.hourly.data[i].summary +"' length='30' width='30'>"; break;
+									case 'cloudy': icon24Hour="<img src='http://cs-server.usc.edu:45678/hw/hw8/images/cloudy.png' title='" + output.hourly.data[i].summary + "' alt='"+ output.hourly.data[i].summary +"' length='30' width='30'>"; break;
+									case 'partly-cloudy-day': icon24Hour="<img src='http://cs-server.usc.edu:45678/hw/hw8/images/cloud_day.png' title='" + output.hourly.data[i].summary + "' alt='"+ output.hourly.data[i].summary +"' length='30' width='30'>"; break;
+									case 'partly-cloudy-night':	icon24Hour="<img src='http://cs-server.usc.edu:45678/hw/hw8/images/cloud_night.png' title='" + output.hourly.data[i].summary + "' alt='"+ output.hourly.data[i].summary +"' length='30' width='30'>"; break;
+								}
+
+								next24HourVisual += '<tr style="background: white;"><td>' + timeFormatter(output.hourly.data[i].time) + '</td><td>' + icon24Hour + '</td><td>' + (output.hourly.data[i].cloudCover * 100).toFixed(0) + '%</td><td>' + output.hourly.data[i].temperature + '</td><td><span class="glyphicon glyphicon-plus" style="color: #3071A9" data-toggle="collapse" data-target="#viewDetail'+ i +'" aria-expanded="false" aria-controls="viewDetail'+ i +'" aria-hidden="true"></span></td></tr>';
+								next24HourVisual += '<tr style="background: #F9F9F9;" class="collapse" id="viewDetail'+ i +'"><td colspan="5">';
+								next24HourVisual += '<div class="table-responsive"><table class="table table-striped"><tr style="background: white;"><th style="text-align:center">Wind</th><th style="text-align:center">Humidity</th><th style="text-align:center">Visibility</th><th style="text-align:center">Pressure</th></tr>';
+								next24HourVisual += '<tr style="background: #F9F9F9;"><td>' + (output.hourly.data[i].windSpeed).toFixed(2) + ' mph</td><td>' + Math.round(output.hourly.data[i].humidity * 100) + ' %</td><td>' + (output.hourly.data[i].visibility).toFixed(2) + ' mi</td><td>' + output.hourly.data[i].pressure + ' mb</td></tr>';
+								next24HourVisual += '</table></div>';
+								next24HourVisual += '</td></tr>';
+							}
+							next24HourVisual += '</table></div>';
+							$("#next24HoursVisual").html(next24HourVisual);
+
+
+
+
+var next7DaysVisual = "";
+							next7DaysVisual += '<div class="col-xs-12 col-sm-12 col-md-1 col-lg-1"></div><div class="col-xs-12 col-sm-12 col-md-1 col-lg-1"></div>'
+                                                        for(var j = 1; j < 8; j++) {
+
+                                                                var icon7days = "";
+                                                                switch(output.daily.data[j].icon)
+                                                                {
+                                                                        case 'clear-day': icon7days="<img src='http://cs-server.usc.edu:45678/hw/hw8/images/clear.png' title='"+ output.daily.data[j].summary +"' alt='"+ output.daily.data[j].summary +"' length='30' width='30'>";    break;
+                                                                        case 'clear-night': icon7days="<img src='http://cs-server.usc.edu:45678/hw/hw8/images/clear_night.png' title='"+ output.daily.data[j].summary +"' alt='"+ output.daily.data[j].summary +"' length='30' width='30'>"; break;
+                                                                        case 'rain': icon7days="<img src='http://cs-server.usc.edu:45678/hw/hw8/images/rain.png' title='"+ output.daily.data[j].summary +"' alt='"+ output.daily.data[j].summary +"' length='30' width='30'>"; break;
+ 										
