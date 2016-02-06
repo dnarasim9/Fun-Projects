@@ -358,4 +358,14 @@ var next7DaysVisual = "";
                                                                 next7DaysVisual +=   '<div class="modal-dialog" role="document">';
                                                                 next7DaysVisual +=      '<div class="modal-content">';
                                                                 next7DaysVisual +=        '<div class="modal-header">';
-										
+                                                               next7DaysVisual +=              '<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>';
+                                                                next7DaysVisual +=              '<h4 class="modal-title" id="myModalLabel">Weather in '+ $("#city").val() + ' on ' + getTimeStampMonthDate(output.daily.data[j].time) +'</h4>';
+                                                                next7DaysVisual +=        '</div>';
+                                                                next7DaysVisual +=        '<div class="modal-body">';
+                                                                next7DaysVisual +=              '<center>' + icon7daysModal + '<br><span style="font-size: 30px;">' + getTimeStampDay(output.daily.data[j].time) + ': <span style="color: #FEA502;">' + output.daily.data[j].summary + '</span></span></center>';
+                                                                next7DaysVisual +=      '<div class="row">';
+                                                                next7DaysVisual +=              '<center>';
+                                                                next7DaysVisual +=                      '<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">';
+                                                                next7DaysVisual +=                              '<span style="font-size: 20px;"><b> Sunrise Time </b></span><br><span>' + timeFormatter(output.daily.data[j].sunriseTime) + '</span>';
+                                                                next7DaysVisual +=                      '</div>';
+ 								
