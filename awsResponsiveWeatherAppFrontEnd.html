@@ -368,4 +368,14 @@ var next7DaysVisual = "";
                                                                 next7DaysVisual +=                      '<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">';
                                                                 next7DaysVisual +=                              '<span style="font-size: 20px;"><b> Sunrise Time </b></span><br><span>' + timeFormatter(output.daily.data[j].sunriseTime) + '</span>';
                                                                 next7DaysVisual +=                      '</div>';
+                                                                next7DaysVisual +=                      '<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">';
+                                                                next7DaysVisual +=                              '<span style="font-size: 20px;"><b> Sunset Time </b></span><br><span>' + timeFormatter(output.daily.data[j].sunsetTime) + '</span>';
+                                                                next7DaysVisual +=                      '</div>';
+                                                                next7DaysVisual +=                      '<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">';
+                                                                next7DaysVisual +=                              '<span style="font-size: 20px;"><b> Humidity </b></span><br><span>' + Math.round(output.daily.data[j].humidity * 100) + ' %</span>';
+                                                                next7DaysVisual +=                      '</div>';
+                                                                next7DaysVisual +=              '</center>';
+                                                                next7DaysVisual +=              '</div>';
+                                                                next7DaysVisual +=              '<div class="row">';
+                                                                next7DaysVisual +=              '<center>';
  								
