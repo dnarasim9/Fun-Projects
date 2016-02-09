@@ -378,4 +378,14 @@ var next7DaysVisual = "";
                                                                 next7DaysVisual +=              '</div>';
                                                                 next7DaysVisual +=              '<div class="row">';
                                                                 next7DaysVisual +=              '<center>';
+                                                                next7DaysVisual +=                      '<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">';
+                                                                next7DaysVisual +=                              '<span style="font-size: 20px;"><b> Wind Speed </b></span><br><span>' + (output.daily.data[j].windSpeed).toFixed(2) + ' mph</span>';
+                                                                next7DaysVisual +=                      '</div>';
+                                                                next7DaysVisual +=                      '<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">';
+                                                                next7DaysVisual +=                              '<span style="font-size: 20px;"><b> Visibility </b></span><br><span>' + visibility7Days + '</span>';
+                                                                next7DaysVisual +=                      '</div>';
+                                                                next7DaysVisual +=                      '<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">';
+                                                                next7DaysVisual +=                              '<span style="font-size: 20px;"><b> Pressure </b></span><br><span>' + output.daily.data[j].pressure + ' mb</span>';
+                                                                next7DaysVisual +=                      '</div>';
+                                                                next7DaysVisual +=              '</center>';
  								
