@@ -208,3 +208,13 @@ DISTANCE = small;
    * Construct the face-spaces from the given directory. There must be at least sixteen images in that directory and   
    *each image must have the same dimensions. The face-space bundles are also cached in that directory for speeding    
    * up further initialization.     
+  */
+  public void readFaceBundles(String n) throws FileNotFoundException, IOException, IllegalArgumentException,  ClassNotFoundException
+ {
+
+root_dir = new File(n);
+ 	File[] files= root_dir.listFiles(new ImageFilter());
+  	Vector filenames = new Vector();
+String[] set = new String[MAGIC_SETNR];
+int i= 0;
+
