@@ -218,3 +218,13 @@ root_dir = new File(n);
 String[] set = new String[MAGIC_SETNR];
 int i= 0;
 
+    // Sort the list of filenames
+ 	 for ( i = 0; i < files.length; i++) 
+{
+      		  filenames.addElement(files[i].getName());
+    	}
+  	Collections.sort((List)filenames);
+b = new FaceBundle[(files.length / MAGIC_SETNR)+1];
+
+    	// Read each set of 16 images.
+  	for (i = 0; i < b.length; i++)
