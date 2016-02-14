@@ -228,3 +228,13 @@ b = new FaceBundle[(files.length / MAGIC_SETNR)+1];
 
     	// Read each set of 16 images.
   	for (i = 0; i < b.length; i++)
+{
+      	         for (int j = 0; j < MAGIC_SETNR;j++) 
+        {
+        		if (filenames.size() > j+MAGIC_SETNR*i) 
+{
+          set[j] = (String)filenames.get(j+MAGIC_SETNR*i);
+          	               }
+      	        }
+      	         b[i] = submitSet(root_dir.getAbsolutePath() + "/",set);
+}
