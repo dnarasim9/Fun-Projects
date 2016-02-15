@@ -238,3 +238,13 @@ b = new FaceBundle[(files.length / MAGIC_SETNR)+1];
       	        }
       	         b[i] = submitSet(root_dir.getAbsolutePath() + "/",set);
 }
+  }
+
+  /*
+   * Submit a set of sixteen images in the directory and construct a face-space object. This
+   * can be done either by reading the cached objects (if there are any) 
+   */
+
+  private FaceBundle submitSet(String dir, String[] files) throws FileNotFoundException, IOException,   
+IllegalArgumentException, ClassNotFoundException 
+{
