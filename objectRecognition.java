@@ -258,3 +258,13 @@ IllegalArgumentException, ClassNotFoundException
     
 try{
 for (i = 0; i < files.length; i++)
+  {
+     		name = name + files[i].substring(0,files[i].indexOf('.')); // Construct the cache name
+    	  }
+}
+
+
+catch (NullPointerException e)
+{  	JOptionPane.showMessageDialog(null,"database contains files other than imges or folder is empty","error",1);
+}
+   	 // Check to see if a FaceBundle cache has been saved
