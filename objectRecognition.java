@@ -248,3 +248,13 @@ b = new FaceBundle[(files.length / MAGIC_SETNR)+1];
   private FaceBundle submitSet(String dir, String[] files) throws FileNotFoundException, IOException,   
 IllegalArgumentException, ClassNotFoundException 
 {
+
+ 	if (files.length != MAGIC_SETNR)
+     		throw new IllegalArgumentException("Can only accept a set of "+MAGIC_SETNR+" files.");
+
+    	FaceBundle bundle  = null;
+  	int i =0;
+    	String name = "cache";
+    
+try{
+for (i = 0; i < files.length; i++)
