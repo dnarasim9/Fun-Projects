@@ -268,3 +268,13 @@ catch (NullPointerException e)
 {  	JOptionPane.showMessageDialog(null,"database contains files other than imges or folder is empty","error",1);
 }
    	 // Check to see if a FaceBundle cache has been saved
+
+  	File f = new File(dir + name + ".cache");
+
+   	if (f.exists() && (USE_CACHE > 0))
+      bundle = readBundle(f);
+    	else 
+{
+      bundle = computeBundle(dir, files);
+    	      if (USE_CACHE > 0)
+    	      saveBundle(f, bundle);
