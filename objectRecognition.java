@@ -278,3 +278,13 @@ catch (NullPointerException e)
       bundle = computeBundle(dir, files);
     	      if (USE_CACHE > 0)
     	      saveBundle(f, bundle);
+  	}
+return bundle;
+  }
+
+  private void saveBundle(File f, FaceBundle bundle) throws FileNotFoundException, 
+  IOException
+{
+f.createNewFile();
+    	FileOutputStream out = new FileOutputStream(f.getAbsolutePath());
+      	ObjectOutputStream fos = new ObjectOutputStream(out);
