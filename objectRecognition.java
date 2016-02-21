@@ -288,3 +288,13 @@ return bundle;
 f.createNewFile();
     	FileOutputStream out = new FileOutputStream(f.getAbsolutePath());
       	ObjectOutputStream fos = new ObjectOutputStream(out);
+    	fos.writeObject(bundle);
+ 	fos.close();
+}
+
+private FaceBundle readBundle(File f) throws FileNotFoundException, IOException, ClassNotFoundException
+{
+FileInputStream in = new FileInputStream(f);
+ObjectInputStream fo = new ObjectInputStream(in);
+   	FaceBundle bundle = (FaceBundle)fo.readObject();
+    	fo.close();
