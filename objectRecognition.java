@@ -298,3 +298,13 @@ FileInputStream in = new FileInputStream(f);
 ObjectInputStream fo = new ObjectInputStream(in);
    	FaceBundle bundle = (FaceBundle)fo.readObject();
     	fo.close();
+    	return bundle;
+}
+
+private FaceBundle computeBundle(String dir, String[] id) throws IllegalArgumentException, 
+FileNotFoundException, IOException
+{
+xxxFile[] files = new xxxFile[MAGIC_SETNR];
+    	xxxFile file = null;
+    	String temp = null;
+    	int width = 0;
