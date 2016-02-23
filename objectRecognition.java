@@ -308,3 +308,13 @@ xxxFile[] files = new xxxFile[MAGIC_SETNR];
     	xxxFile file = null;
     	String temp = null;
     	int width = 0;
+    	int height = 0;
+    	int i = 0;
+
+    	for (i = 0; i < files.length; i++)
+{
+      		temp = id[i].toLowerCase();
+      		temp = temp.substring(temp.lastIndexOf('.')+1,temp.length());
+      		if (temp.equals("jpg") || temp.equals("jpeg")) 
+file = new JPGFile(dir+id[i]);
+      		else if (temp.equals("ppm") || temp.equals("pnm")) 
