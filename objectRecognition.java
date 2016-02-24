@@ -318,3 +318,13 @@ xxxFile[] files = new xxxFile[MAGIC_SETNR];
       		if (temp.equals("jpg") || temp.equals("jpeg")) 
 file = new JPGFile(dir+id[i]);
       		else if (temp.equals("ppm") || temp.equals("pnm")) 
+file = new PPMFile(dir+id[i]);
+    		if (file == null)
+        			throw new IllegalArgumentException(id[i]+" is not an image file!");
+
+      		files[i] = file;
+
+     		 if (i == 0) 
+{
+        			width = files[i].getWidth();
+        			height = files[i].getHeight();
