@@ -328,3 +328,13 @@ file = new PPMFile(dir+id[i]);
 {
         			width = files[i].getWidth();
         			height = files[i].getHeight();
+      		}
+      		if ((width != files[i].getWidth()) || (height != files[i].getHeight()) )
+      	{ 	JOptionPane.showMessageDialog(null,"Images in database not of size 
+200x200","error",1);
+      		throw new IllegalArgumentException("All image files must have the same width and height!");
+        
+      		}
+    	}
+
+double[][] face_v = new double[MAGIC_SETNR][width*height];
