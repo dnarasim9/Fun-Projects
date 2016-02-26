@@ -338,3 +338,13 @@ file = new PPMFile(dir+id[i]);
     	}
 
 double[][] face_v = new double[MAGIC_SETNR][width*height];
+    
+   	 for (i = 0; i < files.length; i++) 
+{
+        	        face_v[i] = files[i].getDouble();
+    	}
+
+    return EigenFaceComputation.submit(face_v, width, height, id,true);
+}
+  
+  
