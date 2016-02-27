@@ -348,3 +348,13 @@ double[][] face_v = new double[MAGIC_SETNR][width*height];
 }
   
   
+ public double[] readImage(String f) throws FileNotFoundException, IllegalArgumentException, IOException 
+{
+xxxFile file = null;
+   	String temp = f.toLowerCase();
+  	temp = temp.substring(temp.lastIndexOf('.')+1,temp.length());
+  	if (temp.equals("jpg"))  
+file = new JPGFile(f);
+      	else if (temp.equals("ppm") || temp.equals("pnm")) 
+file = new PPMFile(f);
+    	if (file == null)
