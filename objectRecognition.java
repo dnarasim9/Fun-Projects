@@ -358,3 +358,13 @@ file = new JPGFile(f);
       	else if (temp.equals("ppm") || temp.equals("pnm")) 
 file = new PPMFile(f);
     	if (file == null)
+     	{	JOptionPane.showMessageDialog(null,f+" is not image","error",1);
+      	 	throw new IllegalArgumentException(f+" is not an image file!");
+      	}
+ 	return file.getDouble();
+  }
+
+}
+
+//for filetering of images into jpeg or jpg
+class ImageFilter implements FileFilter
