@@ -1,2 +1,2 @@
-# dnarasim9.github.io
-My Web Repository
+# FunProjects
+My Repository for interesting and fun free-time projects
