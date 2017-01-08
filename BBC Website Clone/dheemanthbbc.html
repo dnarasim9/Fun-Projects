@@ -1,0 +1,383 @@
+<!doctype html>
+<html>
+ <head>
+ 	<title>Dheemanth's BBC</title>
+
+ 	<meta charset="utf-8" />
+ 	<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+ 	<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  	<style type="text/css">
+
+  	   body {
+  	   		margin:0;
+  	   		font-family:Arial;
+  	   }
+
+
+  	   #topbar {
+  	   		background-color:white;
+  	   		width:100%;
+  	   		height:43px;
+  	   }
+
+  	   .fixedwidth {
+  	   		width:980px;
+  	   		margin:0 auto;
+  	   }
+
+  	   #logodiv {
+  	   		padding:6px 6px 5px 6px;
+  	   		border-right:1px lightgrey solid;
+  	   		float:left;
+  	   }
+
+  	   #signindiv {
+			font-size:0.8em;
+			font-weight:bold;
+			border-right:1px lightgrey solid;
+			width:140px;
+			float:left;
+			padding:10px 15px 11px 20px;
+
+  	   }
+
+  	   #signindiv img {
+  	   		position:relative;
+  	   		top:3px;
+  	   		padding-right:4px;
+  	   }
+
+  	   #topmenudiv {
+  	   		float:left;
+  	   		margin:0;
+  	   }
+
+  	   #topmenudiv ul {
+  	   		padding:0;
+  	   		margin:0;
+
+  	   }
+
+  	   #topmenudiv ul a {
+  	   		color:black;
+  	   		font-weight:0.9em;
+  	   }
+
+  	   #topmenudiv li {
+  	   		list-style:none;
+  	   		padding:16px 15px 12px 15px;
+  	   		font-weight:bold;
+  	   		font-size:0.8em;
+  	   		border-right:1px lightgrey solid;
+  	   		float:left;
+
+  	   }
+
+  	   #searchdiv {
+  	   		float:left;
+  	   		height:35px;
+  	   		padding:9px;
+  	   }
+
+  	   #searchdiv input{
+  	   		background-color:lightgrey;
+  	   		font-size:0.9em;
+  	   		border:2.5px lightblue solid;
+  	   		border-radius:4px;
+  	   		padding:2px 4px 4px 4px;
+  	   		background-image:url("images/searchlogo.jpg");
+			background-repeat:no-repeat;
+  	   		background-position:right center;
+  	   		float:left;
+
+  	   }
+
+  	   .break {
+  	   		clear:both;
+  	   }
+
+  	   #newsbar {
+  	   		background-color:#BB1919;
+  	   		width:100%;
+  	   		height:60px;
+  	   		float:left;
+  	   		margin-top:-10px;
+
+  	   }
+
+  	   #newsheader {
+  	   		margin:0;
+  	   		padding:0;
+  	   		float:left;
+
+  	   }
+
+  	   #newsheader p{
+  	   		color:white;
+  	   		font-size:2em;
+  	   		margin:5px;
+  	   		padding-top:10px;
+
+  	   }
+
+  	   #topicbar {
+  	   		background-color:#A91717;
+  	   		width:100%;
+  	   		height:30px;
+  	   		float:left;
+
+  	   }
+
+  	   #topicmenu ul{
+  	   		color:white;
+  	   		margin:0;
+  	   		padding:0px;
+  	   		float:left;
+
+
+  	   }
+
+  	   #topicmenu ul a {
+  	   		color:white;
+  	   }
+
+  	   #topicmenu li {
+  	   		list-style:none;
+  	   		padding:6px 14px 5px 14px;
+  	   		font-size:0.9em;
+  	   		float:left;
+  	   		border-right:1px #77848C solid;
+  	   }
+
+  	   .nb {
+  	   		border-right:none;
+  	   }
+
+
+  	   #content {
+  	   		width:100%;
+  	   		float:left;
+  	   		font-size:0.9em;
+  	   }
+
+  	   .date {
+  	   		font-weight:bold;
+  	   }
+
+  	   h1 {
+  	   		color:grey !important;
+  	   }
+
+  	   .headlineimage {
+  	   		float:left;
+  	   }
+
+  	   .newsitem {
+  	   		width:250px;
+  	   		position:relative;
+  	   		left:45px;
+  	   		float:left;
+  	   		font-size:1.1	em;
+  	   		padding-top:-18px;
+
+  	   }
+
+  	   .video {
+  	   		background-image:url("images/triangle.jpg");
+  	   		background-repeat:no-repeat;
+  	   		background-position:left center;
+  	   		padding-left:23px;
+  	   }
+
+  	   .links {
+  	   		line-height:1.7em;
+  	   }
+
+  	   a {
+  	   		text-decoration:none;
+  	   		color:#265083;
+  	   }
+
+  	   a:hover {
+  	   		text-decoration:underline;
+  	   }
+
+  	   #watchlisten {
+  	   		float:right;
+  	   		width:360px;
+  	   		position:relative;
+  	   		margin-top:-15px;
+  	   		margin-right:-55px;
+  	   }
+
+  	   #miscnews {
+			margin-right:100px;
+			margin-left:90px;
+
+  	   }
+
+
+ 	</style>
+
+ </head>
+
+ <body>
+
+   <div id="container">
+
+      <div id="topbar">
+
+      		<div class="fixedwidth">
+
+
+      		<div id="logodiv">
+
+      			<img src="images/bbclogo.jpg">
+
+      		</div>
+
+
+      		<div id="signindiv">
+
+      		   <img src="images/signin.jpg"> Sign in
+
+      		</div>
+
+
+      		<div id="topmenudiv">
+
+      			<ul>
+
+
+      				<li><a href="" />News</a></li>
+      				<li><a href="" />Sport</a></li>
+      				<li><a href="" />Weather</a></li>
+      				<li><a href="" />Shop</a></li>
+      				<li><a href="" />Earth</a></li>
+      				<li><a href="" />Travel</a></li>
+      				<li><a href="" />More</a></li>
+
+      			</ul>
+
+      		</div>
+
+      		<div id="searchdiv">
+
+      				<input type="text" placeholder="Search">
+
+      		</div>
+
+   		</div>
+
+      </div>
+
+      <div class="break"></div>
+
+      		<div id="newsbar">
+
+      			<div class="fixedwidth">
+
+      		    <div id="newsheader">
+
+      			   <p>NEWS</p>
+
+      		    </div>
+
+				</div>
+
+			</div>
+
+
+      <div class="break"></div>
+
+      		<div id="topicbar">
+
+      			<div class="fixedwidth">
+
+      		    <div id="topicmenu">
+
+      			   <ul>
+      			   		<li><a href="" />Home</a></li>
+						<li><a href="" />Video</a></li>
+						<li><a href="" />World</a></li>
+						<li><a href="" />Asia</a></li>
+						<li><a href="" />UK</a></li>
+						<li><a href="" />Business</a></li>
+						<li><a href="" />Tech</a></li>
+						<li><a href="" />Science</a></li>
+						<li><a href="" />Magazine</a></li>
+						<li><a href="" />Entertainment & Arts</a></li>
+						<li><a href="" />Health</a></li>
+ 						<li><a href="" />More</a></li>
+
+      			   </ul>
+
+      		    </div>
+
+				</div>
+
+			</div>
+
+			<div class="break"/>
+
+			<div id="content">
+
+				<div class="fixedwidth">
+
+				<p>&nbsp; <span class="date">30 June 2015</span> Last updated at 15:23</p>
+
+				<h1><a href="">Pollution to spread across England<a></h1>
+
+				<img class="headlineimage" width=330 height=230 src="images/earth.jpg"/>
+
+				<div class="newsitem">
+
+				Health warnings have been issued by the government as pollution spreading England is forecat to hit high levels
+
+				<p><a class="video links" href="">Why are pollution levels so high?</a><br />
+
+				<a class="video links" href="">Saharan dust visible on cars</a><br>
+
+				<a class="video links" href="">How Saharan dust reached the UK</a><br>
+
+				<a class="video links" href="">What will pollution do to us?</a><br>
+
+				<a class="video links" href="">UK traffic collisions at all time high</a><br>
+
+				</p>
+
+				</div>
+
+				<div id="watchlisten">
+
+					<img src="images/watchlisten.jpg" />
+					<br>
+					<br>
+					<br>
+
+				</div>
+
+				</div>
+
+			</div>
+
+			<div class="break" />
+
+				<div id="miscnews">
+
+					<div class="fixedwidth">
+
+					<img src="images/miscnews.jpg" />
+
+				</div>
+
+
+			</div>
+
+   </div>
+
+
+
+ </body>
+</html>
